@@ -95,7 +95,7 @@ export const AuthProvider = ({ children }) => {
       setError(null);
 
       // Redirect to Google OAuth endpoint
-      const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID;
+      const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID;
       const redirectUri = `${window.location.origin}/auth/google/callback`;
       const scope = 'openid email profile';
 
@@ -176,4 +176,3 @@ export const AuthProvider = ({ children }) => {
 };
 
 export default AuthContext;
-
